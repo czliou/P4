@@ -59,8 +59,9 @@ test:
 # clean
 ###
 clean:
-	rm -f *~ *.class parser.java Wumbo.jlex.java "sym.java"
+	rm -f *~ *.class parser.java Wumbo.jlex.java sym.java
 
 ## cleantest (delete test artifacts)
 cleantest:
 	rm -f *.out
+

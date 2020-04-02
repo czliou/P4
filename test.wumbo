@@ -1,0 +1,93 @@
+struct Point {
+    int x;
+    int y;
+    bool Point;
+};
+int f(int x, bool b) { }
+void g() {
+    int a;
+    bool b;
+    struct Point p;
+    p.x = a;
+    b = a == 3;
+    f(a + p.y*2, b);
+    g();
+}
+
+int var1;
+int var2;
+bool var3;
+struct Point pt;
+
+int func(int x, bool b) { 
+    int a1d1;
+    var1 ++;
+    var2 --;
+    b = var1 < 3;
+    a1d1 = x + var1;
+    x = var1 + b;
+    x = var1/b;
+    x = var1*b;
+    var3 = var2 > var1;
+    if (b) {
+        return 21;
+    } else {
+        return 999999;
+    }
+}
+
+int func1(int a, int b, bool c) {
+    int var1;
+    int var2;
+    bool var3;
+    int func1;
+    struct Point pt;
+    var2 = var2 + var1;
+    var1 = var1 + var2;
+    pt.x = var2;
+    pt.y = var1;
+    var1 = pt.x + var2;
+    pt.y = var1 + var2;
+    var2 = pt.y;
+    while(b < 2){
+        int var1;
+        var1 = 3;
+    }
+    return pt.x;
+}
+
+void function2(int function2) {
+    int a;
+    bool b;
+    struct Point p;
+    b = a == 89;
+    func(a + p.y + p.x*a, b);
+    g();
+}
+
+int func3(int number, bool go){
+    if(number == 89){
+        return number;
+    }
+
+    if(number > 3){
+        int val;
+        val = number;
+        val = val - 1;
+    }
+    else{
+        int val;
+        val = number;
+        val = val + 1;
+    }
+    if(go){
+        return func3(number - 1, go);
+    }
+    else{
+        int number;
+        bool go;
+        number = 3;
+        go = number == 3;
+        return number;
+    }
+}

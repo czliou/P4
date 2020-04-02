@@ -54,10 +54,13 @@ public class P4 {
             System.exit(-1);
         }
 
-	// ADD NAME ANALYSIS PART HERE
-        ((ASTnode)root.value).unparse(outFile, 0);
+    // ADD NAME ANALYSIS PART HERE
+        ((ProgramNode) root.value).nameAnalyze();
+        if(!ErrMsg.fatal)
+            ((ASTnode)root.value).unparse(outFile, 0);
         outFile.close();
 
         return;
     }
 }
+

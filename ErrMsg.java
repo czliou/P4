@@ -4,6 +4,7 @@
  * This class is used to generate warning and fatal error messages.
  */
 class ErrMsg {
+    public static boolean fatal = false;
     /**
      * Generates a fatal error message.
      * @param lineNum line number for error location
@@ -11,6 +12,7 @@ class ErrMsg {
      * @param msg associated message for error
      */
     static void fatal(int lineNum, int charNum, String msg) {
+        fatal = true;
         System.err.println(lineNum + ":" + charNum + " ***ERROR*** " + msg);
     }
 
@@ -24,3 +26,4 @@ class ErrMsg {
         System.err.println(lineNum + ":" + charNum + " ***WARNING*** " + msg);
     }
 }
+

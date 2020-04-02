@@ -1,0 +1,78 @@
+int x;
+bool b;
+
+struct Point{
+       int x;
+       int y;
+       bool x;
+};
+
+struct Point{
+       int x;
+       int y;
+       struct Point Point;
+};
+
+struct Point2{
+       struct point p;
+       bool z;
+};
+
+struct Point3{
+       struct Point2 pl;
+       bool func;
+       void forty;
+       int num;
+};
+
+
+int func;
+int c(int b, int c){
+    undeclaredFunc();
+}
+
+bool func(int a, int b, bool c, int d , int e){
+       bool d;
+}
+
+bool func2(int a, int b, bool c, int d , void e){
+       bool d;
+}
+
+void go(int a, int b){
+
+     #try same names
+    int k;
+     int x;
+     bool bb;
+     int Point3;
+     struct Point h;
+     struct Point bb;
+     struct Point2 p;
+     struct Point2 pl;
+     struct Point3 s;
+    struct sd inva;
+     void ab;
+    struct sks oo; 
+     gg = bb;
+     
+     x = global.x;
+     bb = s.pl.z;
+     y = p.abc;
+}
+
+void func3(){
+    struct Point pt;
+    struct Array arr;
+    void num;
+    int a;
+    pt1.alive = 0;
+    arr.pt = "hello";
+    k++;
+}
+
+void func4(int t, void i){}
+
+void func3(){}
+
+void func5(int a, int a){}
