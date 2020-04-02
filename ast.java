@@ -992,8 +992,8 @@ class IdNode extends ExpNode {
         }
     }
 
-    public void setForDot(Sym k) {
-        s = k;
+    public void link(Sym sym) {
+        s = sym;
     }
 
     private int myLineNum;
@@ -1042,11 +1042,11 @@ class DotAccessExpNode extends ExpNode {
                     }
 
                     if (structTable.lookupLocal(myId.getStrVal()) instanceof Sym)
-                        myId.setForDot(structTable.lookupLocal(myId.getStrVal()));
+                        myId.link(structTable.lookupLocal(myId.getStrVal()));
 
                     if (structTable.lookupLocal(myId.getStrVal()) instanceof StructDeclSym) {
                         this.prev = (StructDeclSym) structTable.lookupLocal(myId.getStrVal());
-                        myId.setForDot((StructDeclSym) structTable.lookupLocal(myId.getStrVal()));
+                        myId.link((StructDeclSym) structTable.lookupLocal(myId.getStrVal()));
                     }
                 } catch (EmptySymTableException e) {
                     e.printStackTrace();
@@ -1068,11 +1068,11 @@ class DotAccessExpNode extends ExpNode {
                     return;
                 }
                 if(structTable.lookupLocal(myId.getStrVal()) instanceof Sym)
-                    myId.setForDot(structTable.lookupLocal(myId.getStrVal()));
+                    myId.link(structTable.lookupLocal(myId.getStrVal()));
     
                 if(structTable.lookupLocal(myId.getStrVal()) instanceof StructDeclSym) {
                     this.prev = (StructDeclSym)structTable.lookupLocal(myId.getStrVal());
-                    myId.setForDot((StructDeclSym)structTable.lookupLocal(myId.getStrVal()));
+                    myId.link((StructDeclSym)structTable.lookupLocal(myId.getStrVal()));
                 }
             } catch (EmptySymTableException e) {
                 e.printStackTrace();
@@ -1417,3 +1417,4 @@ class GreaterEqNode extends BinaryExpNode {
         myExp2.nameAnalyze(st);
     }
 }
+
